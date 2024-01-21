@@ -114,11 +114,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity:1;
-    transition: all 1s ease-out;
+    opacity:0;
+    transition: all 0.5s ease-out;
+}
+.play:hover{
+    opacity: 1;
 }
 .playBar{
+    left: 2vw;
+    height: 10vh;
     position: absolute;
     bottom: 2vh;
-    width: 100%;
+    width: 95%;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+}
+.songButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+.playBtn{
+    width: 5vw;
+}
+.btn{
+    border-radius: 5vw;
+    width: 3vw;
+    background-color: white;
 }
