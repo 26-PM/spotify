@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto",sans-serif;
+}
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+.left{
+    width: 25vw;
+    height: 100vh;
+    padding: 1vw;
+}
+.right{
+    width: 75vw;
+    height: 93vh;
+    position: relative;
+}
+.home ul li{
+    cursor: pointer;
+    display: flex;
+    gap: 1.5vw;
+    text-decoration: none;
+    width: 1.5vw;
+    padding-top: 2vh;
+}
+.heading{
+    cursor: pointer;
+    display: flex;
+    gap: 1.5vw;
+    width: 1.5vw;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    gap: 1.5vw;
+    font-size: 0.8vw;
+    text-decoration: none;
+    padding-top: 2vh;
+    margin-bottom: 5vh;
+}
+.footer a{
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+}
+.right{
+    margin: 4vh;
+}
+.nav{
+    cursor:pointer;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw;
+}
+.header button,svg{
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 3vw;
+    height: 5vh;
+}
+.header button{
+    background-color: white;
+    font-weight: 600;
+    font-size: 1vw;
+    border-radius: 5vw;
+    width: 7vw;
+    height: 7vh;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+.header button:hover{
+    width: 10vw;
+}
+.playlists{
+    padding-left: 1.5vw;
+}
+.cardContainer{
+    display: flex;
+    gap: 1.5vw;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+.card,.card img{
+    position: relative;
+    margin-top:1vw;
+    width: 14vw;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.055);
+    border-radius: 1vw;
+    padding: 0.1vw; 
+}
+.card h3,.card p{
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+}
+.play {
+    position: absolute;
+    width: 10vh;
+    height: 5vw;
+    left:8vw ;
+    bottom: 13vh;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:1;
+    transition: all 1s ease-out;
+}
+.playBar{
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+}
