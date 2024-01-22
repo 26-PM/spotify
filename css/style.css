@@ -34,6 +34,9 @@
     gap: 1.5vw;
     width: 1.5vw;
 }
+.library{
+    height: 69vh;
+}
 .footer{
     position: absolute;
     bottom: 0;
