@@ -146,3 +146,11 @@
     width: 3vw;
     background-color: white;
 }
+.songList ul{
+    margin: 2vw;
+}
+.songList ul li{
+   list-style-type: decimal;
+   margin-top:1vh;
+   font-size:1vw;
+}
