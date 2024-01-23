@@ -68,4 +68,8 @@
     .nav svg{
         width:12vw;
     }
+    .playlists h2{
+        margin-top: 2vh;
+        margin-left: 10vw;
+    }
 }
