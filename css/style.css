@@ -158,3 +158,21 @@
    padding: 1vw;
    border-radius: 1vw;
 }
+.seekBar{
+    height: 2vh;
+    width: 100%;
+    border-radius: 1vw;
+    position: absolute;
+    bottom: 11vh;
+    border: 1vh solid white;
+}
+.circle{
+    height: 4vh;
+    width: 2vw;
+    border-radius: 1vw;
+    background-color: black;
+    position: relative;
+    bottom: 2vh;
+    left: 0%;
+    transition: left 0.5s;
+}
