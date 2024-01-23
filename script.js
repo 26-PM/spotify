@@ -21,7 +21,7 @@ async function getSongs() {
 // seconds to minutes
 function convertSecondsToMinutesAndSeconds(seconds) {
     if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {
-      return 'Invalid input';
+      return "00:00";
     }
   
     const minutes = Math.floor(seconds / 60);
@@ -32,7 +32,7 @@ function convertSecondsToMinutesAndSeconds(seconds) {
   
     return `${formattedMinutes}:${formattedSeconds}`;
   }
-  
+
 const playMusic=(track)=>{
     // // Play the song
     currentSong.src="/songs/"+ track + ".mp3";
@@ -46,7 +46,6 @@ const playMusic=(track)=>{
 async function main() {
     // Get all songs from directory
     let songs = await getSongs();
-    console.log(songs);
 
     // insert songs
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
@@ -78,7 +77,7 @@ async function main() {
 
     // listen for time change
     currentSong.addEventListener("timeupdate",()=>{
-        document.querySelector(".time").innerHTML=`${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}:${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
+        document.querySelector(".time").innerHTML=`${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}/${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
     })
 
 }
