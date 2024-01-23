@@ -77,7 +77,8 @@ async function main() {
 
     // listen for time change
     currentSong.addEventListener("timeupdate",()=>{
-        document.querySelector(".time").innerHTML=`${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}/${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
+        document.querySelector(".time").innerHTML=`${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}/${convertSecondsToMinutesAndSeconds(currentSong.duration)}`;
+        document.querySelector(".circle").style.left=(currentSong.currentTime/currentSong.duration)*100+"%";
     })
 
 }
