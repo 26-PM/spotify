@@ -12,6 +12,11 @@
 li{
     cursor: pointer;
 }
+.hamburger{
+    width: 4vw;
+    margin-bottom: 2vh;
+    display: none;
+}
 .left{
     width: 25vw;
     height: 100vh;
@@ -19,7 +24,7 @@ li{
 }
 .right{
     width: 75vw;
-    height: 93vh;
+    height: 92vh;
     position: relative;
 }
 .home ul li{

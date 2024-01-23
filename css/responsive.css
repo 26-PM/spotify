@@ -4,5 +4,68 @@
         left: -100% ;
         transition: all .3s;
         z-index: 1 ;
+        width:70vw;
+    }
+    .home{
+        font-size:5vw;
+    }
+    .heading{
+        font-size: 7vw;
+    }
+    .songList ul li{
+        font-size: 5vw;
+    }
+    .library{
+        height: 78vh;
+    }
+    .footer{
+        font-size: 0.5rem;
+        display: absolute;
+        left: 15vw;
+        bottom:6vh;
+    }
+    .right{
+        width: 100vw;
+        margin: 2vh;
+    }
+    .hamburger{
+        display: block;
+        width:9vw;
+    }
+    .seekBar{
+        bottom:14vh;
+    }
+    .buttons button{
+            font-size: 6vw;
+            width: 22vw;
+    }
+    .close{
+    top: 4vh;
+    position: absolute;
+    left: 57vw;
+    } 
+    .right{
+        height: 97vh;
+    }  
+    .cardContainer p{
+        display:none;
+        font-size: 3vw;
+    }
+    .playlists{
+        width: 67vw;
+    }
+    .cardContainer {
+        width: 80vw;
+        height: 56vh;
+        margin: 5vh;
+    }
+    .card,.card img{
+        width:29vw;
+    }
+    #play,#next,#previous{
+        width:8vw;
+    }
+    .nav svg{
+        width:12vw;
     }
 }
