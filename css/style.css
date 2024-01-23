@@ -9,7 +9,9 @@
     background-color: black;
     color: white;
 } */
-
+li{
+    cursor: pointer;
+}
 .left{
     width: 25vw;
     height: 100vh;
@@ -125,6 +127,10 @@
     opacity: 1;
 }
 .playBar{
+    padding-top: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-content: space-between;
     left: 2vw;
     height: 10vh;
     position: absolute;
@@ -140,9 +146,11 @@
     gap: 1vw;
 }
 .playBtn{
-    width: 5vw;
+    cursor: pointer;
+    width: 4vw;
 }
 .btn{
+    cursor: pointer;
     border-radius: 5vw;
     width: 3vw;
     background-color: white;
@@ -159,11 +167,12 @@
    border-radius: 1vw;
 }
 .seekBar{
+    left: 3.9vw;
     height: 2vh;
-    width: 100%;
+    width: 90%;
     border-radius: 1vw;
     position: absolute;
-    bottom: 11vh;
+    bottom: 13vh;
     border: 1vh solid white;
 }
 .circle{

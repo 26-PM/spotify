@@ -18,11 +18,29 @@ async function getSongs() {
     }
     return songs;
 }
-
+// seconds to minutes
+function convertSecondsToMinutesAndSeconds(seconds) {
+    if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {
+      return 'Invalid input';
+    }
+  
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+  
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : String(minutes);
+    const formattedSeconds = remainingSeconds < 10 ? `0${remainingSeconds}` : String(remainingSeconds);
+  
+    return `${formattedMinutes}:${formattedSeconds}`;
+  }
+  
 const playMusic=(track)=>{
     // // Play the song
     currentSong.src="/songs/"+ track + ".mp3";
     currentSong.play();
+    play.src="pause.svg"
+    document.querySelector(".songInfo").innerHTML=track;
+    document.querySelector(".time").innerHTML="";
+
 }
 
 async function main() {
@@ -45,5 +63,23 @@ async function main() {
             playMusic(e.innerHTML);
         })
     })
+
+    // attach event listener to play prev and next btns
+    play.addEventListener("click",()=>{
+        if(currentSong.paused){
+            currentSong.play();
+            play.src="pause.svg"
+        }
+        else{
+            currentSong.pause();
+            play.src="play.svg"
+        }
+    })
+
+    // listen for time change
+    currentSong.addEventListener("timeupdate",()=>{
+        document.querySelector(".time").innerHTML=`${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}:${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
+    })
+
 }
 main();
