@@ -19,7 +19,7 @@ async function getSongs() {
     return songs;
 }
 // seconds to minutes
-function convertSecondsToMinutesAndSeconds(seconds) {
+function convertSecondsToMinutesAndSeconds(seconds=0) {
     if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {
       return "00:00";
     }
