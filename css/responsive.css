@@ -39,6 +39,9 @@
             font-size: 6vw;
             width: 22vw;
     }
+    .buttons button:hover{
+        width: 27vw;
+}
     .close{
     top: 4vh;
     position: absolute;
@@ -56,7 +59,7 @@
     }
     .cardContainer {
         width: 80vw;
-        height: 56vh;
+        height: 50vh;
         margin: 5vh;
     }
     .card,.card img{
@@ -71,5 +74,11 @@
     .playlists h2{
         margin-top: 2vh;
         margin-left: 10vw;
+    }
+    .playBar{
+        bottom:10vh;
+    }
+    .seekBar{
+        bottom:5vh;
     }
 }
