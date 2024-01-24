@@ -2,7 +2,7 @@
 let currentSong = new Audio();
 
 async function getSongs() {
-    let a = await fetch("spotify/songs")
+    let a = await fetch("/songs")
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");
