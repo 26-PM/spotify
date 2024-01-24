@@ -4,7 +4,7 @@ let currentSong = new Audio();
 async function getSongs() {
     let a = await fetch("/songs")
     let response = await a.text();
-    console.log(response);
+    // console.log(response);
     let div = document.createElement("div");
     div.innerHTML = response;
     let as = div.getElementsByTagName("a");
@@ -58,7 +58,6 @@ async function main() {
     // attach event listener to each song
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
-            console.log(e.innerHTML);
             playMusic(e.innerHTML);
         })
     })
