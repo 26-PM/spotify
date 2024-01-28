@@ -9,14 +9,19 @@
     .home{
         font-size:5vw;
     }
+    .home li img{
+        height: 4vh;
+    }
     .heading{
         font-size: 7vw;
+        margin-bottom: 5vh;
+        
     }
     .songList ul li{
         font-size: 5vw;
     }
-    .library{
-        height: 78vh;
+    .library {
+        height: 70vh;
     }
     .footer{
         font-size: 0.5rem;
@@ -57,13 +62,19 @@
     .playlists{
         width: 67vw;
     }
+    .playlists h2{
+        font-size: 6vw;
+    }
     .cardContainer {
-        width: 80vw;
+        display: flex;
+        /* /* align-items: center; */
+        justify-content: center; 
+        width: 60vw;
         height: 50vh;
         margin: 5vh;
     }
     .card,.card img{
-        width:29vw;
+        width:60vw;
     }
     #play,#next,#previous{
         width:8vw;
@@ -76,9 +87,31 @@
         margin-left: 10vw;
     }
     .playBar{
+        align-items: center;
+        justify-content: center;
         bottom:10vh;
+        gap: 10vw;
+        border-radius:22%;
+        border-color:black;
     }
     .seekBar{
         bottom:5vh;
+    }
+    .songInfo{
+        font-weight:900;
+        font-size: 3vw;
+    }
+    .home ul li{
+        font-size:5vw;
+    }
+    .logo img{
+        margin-bottom: 2vh;
+        width: 40vw;
+    }
+    .heading h4{
+        font-size:5vw;
+    }
+    .heading img{
+        height: 5vh;
     }
 }

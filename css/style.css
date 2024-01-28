@@ -17,6 +17,9 @@ li{
     margin-bottom: 2vh;
     display: none;
 }
+.logo img{
+    width: 10vw;
+}
 .left{
     width: 25vw;
     height: 100vh;
@@ -34,6 +37,7 @@ li{
     text-decoration: none;
     width: 1.5vw;
     padding-top: 2vh;
+    font-size:1.5vw;
 }
 .heading{
     cursor: pointer;
@@ -41,13 +45,16 @@ li{
     gap: 1.5vw;
     width: 1.5vw;
 }
+.heading h4,img{
+    font-size: 1.5vw;
+}
 .library{
-    height: 69vh;
+    height: 62vh;
 }
 .footer{
     left: 2.2vw;
     position: absolute;
-    bottom: 0;
+    bottom: 3vh;
     cursor: pointer;
     display: flex;
     gap: 1.5vw;
@@ -94,9 +101,17 @@ li{
 .playlists{
     padding-left: 1.5vw;
 }
+.playlists h2{
+    font-weight: 900;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+}
 .cardContainer{
     display: flex;
-    gap: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
     flex-wrap: wrap;
     overflow-y: scroll;
     max-height: 60vh;
@@ -104,7 +119,7 @@ li{
 .card,.card img{
     position: relative;
     margin-top:1vw;
-    width: 14vw;
+    width: 10vw;
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.055);
     border-radius: 1vw;
@@ -129,7 +144,7 @@ li{
     transition: all 0.5s ease-out;
 }
 .play:hover{
-    opacity: 1;
+    /* opacity: 1; */
 }
 .playBar{
     padding-top: 1vh;
@@ -166,10 +181,14 @@ li{
 .songList ul li{
    list-style-type: decimal;
    margin-top:1vh;
-   border: 0.1vw solid white;
-   font-size:1vw;
+   /* border: 0.1vw solid white; */
+   font-size:1.2vw;
    padding: 1vw;
-   border-radius: 1vw;
+   /* border-radius: 25%; */
+}
+.songInfo{
+    font-weight:900;
+    font-size: 1vw;
 }
 .seekBar{
     left: 3.9vw;
@@ -178,7 +197,7 @@ li{
     border-radius: 1vw;
     position: absolute;
     bottom: 13vh;
-    border: 1vh solid white;
+    border: 0.5vh solid #00ff0067
 }
 .circle{
     height: 4vh;
