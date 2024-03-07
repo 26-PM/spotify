@@ -84,6 +84,9 @@
         height: 10vh;
         width:auto;
     }
+    .time{
+        font-size: small;
+    }
     #play,#next,#previous{
         width:8vw;
     }
