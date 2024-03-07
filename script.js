@@ -1,26 +1,10 @@
 // Global Variable for curr song
 let currentSong = new Audio();
-let songs=[];
-songs.push("Dil Jhoom from Crakk.mp3");
-songs.push("O Maahi By Arijit Singh.mp3");
+let songs=[
+    {name:"Dil Jhoom",src:"./Dil Jhoom from Crakk.mp3"},
+    {name:"O Maahi",src:"./O Maahi By Arijit Singh.mp3"}
+];
 
-async function getSongs() {
-    let a = await fetch("./")
-    let response = await a.text();
-    // console.log(response);
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    let songs = [];
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1]);
-        }
-
-    }
-    return songs;
-}
 // seconds to minutes
 function convertSecondsToMinutesAndSeconds(seconds = 0) {
     if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {
@@ -37,25 +21,39 @@ function convertSecondsToMinutesAndSeconds(seconds = 0) {
 }
 
 const playMusic = (track) => {
-    // // Play the song
-    currentSong.src = "/songs/" + track + ".mp3";
-    currentSong.play();
-    play.src = "pause.svg"
-    document.querySelector(".songInfo").innerHTML = track;
-    document.querySelector(".time").innerHTML = "";
-
-}
+    // Find the matching song object using find()
+    const matchedSong = songs.find(song => song.name === track);
+  
+    if (matchedSong) {
+      // Update current song information and playback
+      currentSong.src = matchedSong.src;
+      currentSong.play();
+  
+      // Update UI elements
+      play.src = "pause.svg";
+      document.querySelector(".songInfo").innerHTML = track;
+      document.querySelector(".time").innerHTML = ""; // Reset time display, if needed
+  
+      // Handle potential errors during playback (optional)
+      currentSong.onerror = (e) => {
+        console.error("Error playing song:", e);
+        // Handle errors gracefully, e.g., display an error message or choose a backup song
+      };
+    } else {
+      // Handle the case where the track is not found (optional)
+      console.warn("Track not found:", track);
+      // Handle gracefully, e.g., display a message or default to a different song
+    }
+  };
+  
 
 async function main() {
-    // Get all songs from directory
-    // let songs = await getSongs();
-
+    
     // insert songs
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
-    for (const song of songs) {
-        let cleanSong = song.replaceAll("%20", " ").replace(/%5B128 Kbps%5D-\(SongsPk\.com\.se\)/g, "").replaceAll(".mp3", "").replaceAll("(PagalWorld.com.pe)", "");
-        songUL.innerHTML = songUL.innerHTML + `<li>${cleanSong}</li>`;
-    }
+    songs.forEach(element => {
+      songUL.innerHTML=songUL.innerHTML+`<li>${element.name}</li>`;
+    });
 
 
     // attach event listener to each song
