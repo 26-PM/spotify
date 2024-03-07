@@ -18,7 +18,7 @@ li{
     display: none;
 }
 .logo img{
-    width: 10vw;
+    width: 7vw;
 }
 .left{
     width: 25vw;
@@ -61,7 +61,6 @@ li{
     font-size: 0.8vw;
     text-decoration: none;
     padding-top: 2vh;
-    margin-bottom: 2vh;
 }
 .footer a{
     text-decoration: none;
@@ -95,8 +94,11 @@ li{
     margin-right: 1vw;
     cursor: pointer;
 }
-.header button:hover{
-    width: 10vw;
+.btn{
+    opacity: 0.5;
+}
+button:hover,.playBtn:hover,.btn:hover{
+    scale:0.9;
 }
 .playlists{
     padding-left: 1.5vw;
@@ -106,6 +108,7 @@ li{
     font-size: 1.5vw;
     display: flex;
     justify-content: center;
+    margin: 2vw;
 }
 .cardContainer{
     display: flex;
@@ -113,44 +116,20 @@ li{
     justify-content: center;
     gap: 2vw;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: 60vh;
 }
-.card,.card img{
-    position: relative;
-    margin-top:1vw;
-    width: 10vw;
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.055);
-    border-radius: 1vw;
-    padding: 0.1vw; 
+.card img{
+    height: 18vh;
 }
-.card h3,.card p{
-    padding-bottom: 2vh;
-    padding-left: 1vw;
-}
-.play {
-    position: absolute;
-    width: 10vh;
-    height: 5vw;
-    left:8vw ;
-    bottom: 13vh;
-    background-color: #1fdf64;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity:0;
-    transition: all 0.5s ease-out;
-}
-.play:hover{
-    /* opacity: 1; */
+.card h3{
+    font-size: 1vh;
 }
 .playBar{
-    padding-top: 1vh;
     padding-left: 2vw;
     padding-right: 2vw;
     justify-content: space-between;
+    align-items: center;
     left: 2vw;
     height: 10vh;
     position: absolute;

@@ -4,7 +4,6 @@ let songs=[
     {name:"Dil Jhoom",src:"./Dil Jhoom from Crakk.mp3"},
     {name:"O Maahi",src:"./O Maahi By Arijit Singh.mp3"}
 ];
-
 // seconds to minutes
 function convertSecondsToMinutesAndSeconds(seconds = 0) {
     if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {

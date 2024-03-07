@@ -26,3 +26,9 @@
 .p1{
     padding: 2vh;
 }
+.dark{
+    font-weight:600;
+}
+li{
+    font-weight:500;
+}

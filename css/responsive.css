@@ -67,14 +67,22 @@
     }
     .cardContainer {
         display: flex;
-        /* /* align-items: center; */
-        justify-content: center; 
+        justify-content: center;
+        align-items: center; 
         width: 60vw;
         height: 50vh;
         margin: 5vh;
     }
     .card,.card img{
-        width:60vw;
+        height: 10vh;
+        width:auto;
+    }
+    .cardContainer{
+        overflow-y: scroll;
+    }
+    .card img{
+        height: 10vh;
+        width:auto;
     }
     #play,#next,#previous{
         width:8vw;
