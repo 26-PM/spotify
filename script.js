@@ -1,8 +1,11 @@
 // Global Variable for curr song
 let currentSong = new Audio();
+let songs=[];
+songs.push("Dil Jhoom from Crakk.mp3");
+songs.push("O Maahi By Arijit Singh.mp3");
 
 async function getSongs() {
-    let a = await fetch("./songs")
+    let a = await fetch("./")
     let response = await a.text();
     // console.log(response);
     let div = document.createElement("div");
@@ -45,7 +48,7 @@ const playMusic = (track) => {
 
 async function main() {
     // Get all songs from directory
-    let songs = await getSongs();
+    // let songs = await getSongs();
 
     // insert songs
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
@@ -86,15 +89,15 @@ async function main() {
         document.querySelector(".circle").style.left = percent + "%";
         currentSong.currentTime = ((currentSong.duration) * percent) / 100;
     })
-    
+
     // add event listener to hamburger
-    document.querySelector(".hamburger").addEventListener("click",()=>{
-        document.querySelector(".left").style.left=0;
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".left").style.left = 0;
     });
 
     // add event listener to close
-    document.querySelector(".close").addEventListener("click",()=>{
-        document.querySelector(".left").style.left="-100%";
+    document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "-100%";
     });
 
 }
