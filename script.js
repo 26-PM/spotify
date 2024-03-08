@@ -2,11 +2,10 @@
 let currentSong = new Audio();
 let songs=[
     {name:"Dil Jhoom",src:"./Dil Jhoom from Crakk.mp3"},
+    {name:"Teri Baaton",src:"https://ghantalele.com/uploads/files/data-86/42618/Teri%20Baaton%20Mein%20Aisa%20Uljha%20Jiya%20Title%20Song_192(Ghantalele.com).mp3"},
     {name:"O Maahi",src:"./O Maahi By Arijit Singh.mp3"},
     {name:"Rom Rom",src:"https://songspk.com.se/files/download/id/100553"},
-    {name:"Akhiyaan Gulaab",src:"https://pagalnew.com/download128/45280"},
-    {name:"Laal Peeli Akhiyaan",src:"https://ghantalele.com/uploads/files/data-86/42618/Teri%20Baaton%20Mein%20Aisa%20Uljha%20Jiya%20Title%20Song_192(Ghantalele.com).mp3"},
-
+    {name:"Akhiyaan Gulaab",src:"https://pagalnew.com/download128/45280"}
 ];
 // seconds to minutes
 function convertSecondsToMinutesAndSeconds(seconds = 0) {
@@ -101,5 +100,10 @@ async function main() {
         document.querySelector(".left").style.left = "-100%";
     });
 
+    document.querySelector("#first").addEventListener("click" , ()=>{playMusic('Dil Jhoom' )});
+    document.querySelector("#second").addEventListener("click" , ()=>{playMusic('Teri Baaton' )});
+    document.querySelector("#third").addEventListener("click" , ()=>{playMusic('O Maahi' )});
+    document.querySelector("#fourth").addEventListener("click" , ()=>{playMusic('Rom Rom' )});
+    document.querySelector("#fifth").addEventListener("click" , ()=>{playMusic('Akhiyaan Gulaab' )});
 }
 main();
