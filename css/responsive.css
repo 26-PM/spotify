@@ -1,138 +1,180 @@
-@media (max-width: 896px){
-    .left{
+@media (max-width: 896px) {
+    .left {
         position: absolute;
-        left: -100% ;
+        left: -100%;
         transition: all .3s;
-        z-index: 1 ;
-        width:70vw;
+        z-index: 1;
+        width: 70vw;
     }
-    .home{
-        font-size:5vw;
-    }
-    .home li img{
-        height: 4vh;
-    }
-    .heading{
-        font-size: 7vw;
-        margin-bottom: 5vh;
-        
-    }
-    .close{
-        display: block;
-    }
-    .songList ul li{
+
+    .home {
         font-size: 5vw;
     }
+
+    .home li img {
+        height: 4vh;
+    }
+
+    .heading {
+        font-size: 7vw;
+        margin-bottom: 5vh;
+
+    }
+
+    .close {
+        display: block;
+    }
+
+    .songList ul li {
+        font-size: 5vw;
+    }
+
     .library {
         height: 70vh;
     }
-    .footer{
+
+    .footer {
         font-size: 0.5rem;
         display: absolute;
         left: 15vw;
-        bottom:6vh;
+        bottom: 6vh;
     }
-    .right{
+
+    .right {
         width: 100vw;
         margin: 2vh;
     }
-    .hamburger{
+
+    .hamburger {
         display: block;
-        width:6vw;
+        width: 6vw;
     }
-    .seekBar{
-        bottom:14vh;
+
+    .seekBar {
+        bottom: 14vh;
     }
-    .buttons button{
-            font-size: 6vw;
-            width: 22vw;
+
+    .buttons button {
+        font-size: 6vw;
+        width: 22vw;
     }
-    .buttons button:hover{
+
+    .buttons button:hover {
         width: 27vw;
-}
-    .close{
-    top: 4vh;
-    position: absolute;
-    left: 57vw;
-    } 
-    .right{
+    }
+
+    .close {
+        top: 4vh;
+        position: absolute;
+        left: 57vw;
+    }
+
+    .right {
         height: 97vh;
-    }  
-    .cardContainer p{
-        display:none;
+    }
+
+    .cardContainer p {
+        display: none;
         font-size: 3vw;
     }
-    .playlists{
+
+    .playlists {
         width: 67vw;
     }
-    .playlists h2{
+    .container{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .playlists h2 {
         font-size: 6vw;
     }
+
     .cardContainer {
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         width: 60vw;
         height: 50vh;
         margin: 5vh;
     }
-    .card,.card img{
+
+    .card,
+    .card img {
         height: 10vh;
-        width:auto;
+        width: auto;
     }
-    .cardContainer{
+
+    .cardContainer {
         overflow-y: scroll;
     }
-    .card img{
+
+    .card img {
         height: 10vh;
-        width:auto;
+        width: auto;
     }
-    .time{
+
+    .time {
         font-size: small;
     }
-    #play,#next,#previous{
-        width:8vw;
+
+    #play,
+    #next,
+    #previous {
+        width: 8vw;
     }
-    .nav svg{
-        width:12vw;
+
+    .nav svg {
+        width: 12vw;
     }
-    .playlists h2{
+
+    .playlists h2 {
         margin-top: 2vh;
         margin-left: 10vw;
     }
-    .playBar{
-        width: 92%;
+
+    .playBar {
+        width: 96%;
+        height: 6%;
         align-items: center;
         justify-content: center;
-        bottom:15vh;
+        bottom: 15vh;
         gap: 10vw;
-        border-radius:5%;
-        border-color:black;
+        border-radius: 5%;
+        border-color: black;
     }
-    .circle{
-        bottom:6.8px;
+
+    .circle {
+        bottom: 6.8px;
         border-radius: 50%;
         width: 20px;
         height: 20px;
     }
-    .seekBar{
-        bottom:10vh;
+
+    .seekBar {
+        bottom: 10vh;
     }
-    .songInfo{
-        font-weight:900;
+
+    .songInfo {
+        font-weight: 900;
         font-size: 3vw;
     }
-    .home ul li{
-        font-size:5vw;
+
+    .home ul li {
+        font-size: 5vw;
     }
-    .logo img{
+
+    .logo img {
         margin-bottom: 2vh;
         width: 40vw;
     }
-    .heading h4{
-        font-size:5vw;
+
+    .heading h4 {
+        font-size: 5vw;
     }
-    .heading img{
+
+    .heading img {
         height: 5vh;
     }
 }
