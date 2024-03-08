@@ -138,6 +138,9 @@ button:hover,.playBtn:hover,.btn:hover{
     border: 0.1vw solid white;
     border-radius: 1vw;
 }
+.close{
+    display: none;
+}
 .songButtons{
     display: flex;
     justify-content: center;

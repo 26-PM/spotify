@@ -17,6 +17,9 @@
         margin-bottom: 5vh;
         
     }
+    .close{
+        display: block;
+    }
     .songList ul li{
         font-size: 5vw;
     }
@@ -35,7 +38,7 @@
     }
     .hamburger{
         display: block;
-        width:9vw;
+        width:6vw;
     }
     .seekBar{
         bottom:14vh;
@@ -98,15 +101,22 @@
         margin-left: 10vw;
     }
     .playBar{
+        width: 92%;
         align-items: center;
         justify-content: center;
-        bottom:10vh;
+        bottom:15vh;
         gap: 10vw;
-        border-radius:22%;
+        border-radius:5%;
         border-color:black;
     }
+    .circle{
+        bottom:6.8px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
     .seekBar{
-        bottom:5vh;
+        bottom:10vh;
     }
     .songInfo{
         font-weight:900;
