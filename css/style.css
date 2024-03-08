@@ -101,7 +101,7 @@ button:hover,.playBtn:hover,.btn:hover{
     scale:0.9;
 }
 .playlists{
-    padding-left: 1.5vw;
+    /* padding-left: 1.5vw; */
 }
 .playlists h2{
     font-weight: 900;

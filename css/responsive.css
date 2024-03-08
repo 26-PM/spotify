@@ -79,7 +79,7 @@
     }
 
     .playlists {
-        width: 67vw;
+        /* width: 67vw; */
     }
     .container{
         align-items: center;
@@ -116,7 +116,7 @@
     }
 
     .time {
-        font-size: small;
+        font-size: smaller;
     }
 
     #play,
