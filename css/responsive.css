@@ -131,7 +131,7 @@
 
     .playlists h2 {
         margin-top: 2vh;
-        margin-left: 10vw;
+        /* margin-left: 10vw; */
     }
 
     .playBar {
