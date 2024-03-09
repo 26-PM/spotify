@@ -36,7 +36,7 @@
     .footer {
         font-size: 0.5rem;
         display: absolute;
-        left: 15vw;
+        left: 17vw;
         bottom: 6vh;
     }
 
@@ -181,10 +181,11 @@
         gap:10px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         
     }
     .nav img{
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
     .nav input{
         margin-top: 15px;
