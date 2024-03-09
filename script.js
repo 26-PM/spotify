@@ -1,11 +1,11 @@
 // Global Variable for curr song
 let currentSong = new Audio();
-let songs=[
-    {name:"Dil Jhoom",src:"./Dil Jhoom from Crakk.mp3"},
-    {name:"Teri Baaton",src:"https://ghantalele.com/uploads/files/data-86/42618/Teri%20Baaton%20Mein%20Aisa%20Uljha%20Jiya%20Title%20Song_192(Ghantalele.com).mp3"},
-    {name:"O Maahi",src:"./O Maahi By Arijit Singh.mp3"},
-    {name:"Rom Rom",src:"https://songspk.com.se/files/download/id/100553"},
-    {name:"Akhiyaan Gulaab",src:"https://pagalnew.com/download128/45280"}
+let songs = [
+    { name: "Dil Jhoom", src: "./Dil Jhoom from Crakk.mp3" },
+    { name: "Teri Baaton", src: "https://ghantalele.com/uploads/files/data-86/42618/Teri%20Baaton%20Mein%20Aisa%20Uljha%20Jiya%20Title%20Song_192(Ghantalele.com).mp3" },
+    { name: "O Maahi", src: "./O Maahi By Arijit Singh.mp3" },
+    { name: "Rom Rom", src: "https://songspk.com.se/files/download/id/100553" },
+    { name: "Akhiyaan Gulaab", src: "https://pagalnew.com/download128/45280" }
 ];
 // seconds to minutes
 function convertSecondsToMinutesAndSeconds(seconds = 0) {
@@ -25,36 +25,36 @@ function convertSecondsToMinutesAndSeconds(seconds = 0) {
 const playMusic = (track) => {
     // Find the matching song object using find()
     const matchedSong = songs.find(song => song.name === track);
-  
+
     if (matchedSong) {
-      // Update current song information and playback
-      currentSong.src = matchedSong.src;
-      currentSong.play();
-  
-      // Update UI elements
-      play.src = "pause.svg";
-      document.querySelector(".songInfo").innerHTML = track;
-      document.querySelector(".time").innerHTML = ""; // Reset time display, if needed
-  
-      // Handle potential errors during playback (optional)
-      currentSong.onerror = (e) => {
-        console.error("Error playing song:", e);
-        // Handle errors gracefully, e.g., display an error message or choose a backup song
-      };
+        // Update current song information and playback
+        currentSong.src = matchedSong.src;
+        currentSong.play();
+
+        // Update UI elements
+        play.src = "pause.svg";
+        document.querySelector(".songInfo").innerHTML = track;
+        document.querySelector(".time").innerHTML = ""; // Reset time display, if needed
+
+        // Handle potential errors during playback (optional)
+        currentSong.onerror = (e) => {
+            console.error("Error playing song:", e);
+            // Handle errors gracefully, e.g., display an error message or choose a backup song
+        };
     } else {
-      // Handle the case where the track is not found (optional)
-      console.warn("Track not found:", track);
-      // Handle gracefully, e.g., display a message or default to a different song
+        // Handle the case where the track is not found (optional)
+        console.warn("Track not found:", track);
+        // Handle gracefully, e.g., display a message or default to a different song
     }
-  };
-  
+};
+
 
 async function main() {
-    
+
     // insert songs
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
     songs.forEach(element => {
-      songUL.innerHTML=songUL.innerHTML+`<li>${element.name}</li>`;
+        songUL.innerHTML = songUL.innerHTML + `<li>${element.name}</li>`;
     });
 
 
@@ -100,10 +100,48 @@ async function main() {
         document.querySelector(".left").style.left = "-100%";
     });
 
-    document.querySelector("#first").addEventListener("click" , ()=>{playMusic('Dil Jhoom' )});
-    document.querySelector("#second").addEventListener("click" , ()=>{playMusic('Teri Baaton' )});
-    document.querySelector("#third").addEventListener("click" , ()=>{playMusic('O Maahi' )});
-    document.querySelector("#fourth").addEventListener("click" , ()=>{playMusic('Rom Rom' )});
-    document.querySelector("#fifth").addEventListener("click" , ()=>{playMusic('Akhiyaan Gulaab' )});
+    document.querySelector("#first").addEventListener("click", () => { playMusic('Dil Jhoom') });
+    document.querySelector("#second").addEventListener("click", () => { playMusic('Teri Baaton') });
+    document.querySelector("#third").addEventListener("click", () => { playMusic('O Maahi') });
+    document.querySelector("#fourth").addEventListener("click", () => { playMusic('Rom Rom') });
+    document.querySelector("#fifth").addEventListener("click", () => { playMusic('Akhiyaan Gulaab') });
 }
 main();
+
+// Search Input Events
+let input = document.querySelector("#searchInput");
+const searchResultsContainer = document.getElementById('searchResults');
+
+input.addEventListener("focus", function () {
+    document.querySelector(".playlists").style = "opacity:0.1";
+})
+input.addEventListener("blur", function () {
+    document.querySelector(".playlists").style = "opacity:1";
+    searchResultsContainer.innerHTML = '';
+})
+input.addEventListener("input", () => {
+    if (input.value !== " ") {
+        const filter = songs.filter(obj => obj.name.toLowerCase().startsWith(input.value))
+        searchResultsContainer.innerHTML = '';
+        filter.forEach(song => {
+            const songElement = document.createElement('div');
+            songElement.textContent = song.name; // Displaying song name, you can adjust this according to your data structure
+            songElement.setAttribute("id",song.name)
+            searchResultsContainer.appendChild(songElement);
+        });
+    }
+    if (input.value === " ") {
+        searchResultsContainer.innerHTML = '';
+    }
+    if (input.value == "") {
+        searchResultsContainer.innerHTML = '';
+    }
+})
+
+// Hamburger and close events
+document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".right").style = "opacity:0.1";
+})
+document.querySelector(".close ").addEventListener("click", () => {
+    document.querySelector(".right").style = "opacity:1";
+})

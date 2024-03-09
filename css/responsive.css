@@ -177,4 +177,24 @@
     .heading img {
         height: 5vh;
     }
+    .nav{
+        gap:10px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .nav img{
+        margin-top: 8px;
+    }
+    .nav input{
+        margin-top: 15px;
+        font-size: 10px;
+        width: 100px;
+        padding: 3px;
+    }
+    #searchResults div{
+        position: absolute;
+        font-weight: 400;
+        font-size: small;
+        }
 }
